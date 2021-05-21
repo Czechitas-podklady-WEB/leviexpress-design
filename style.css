@@ -19,6 +19,20 @@ body {
   margin-left: auto;
 }
 
+header,
+footer {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  header,
+  footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 h2 {
   font-size: 1.5rem;
   margin: 0.5rem 0;
@@ -144,7 +158,7 @@ header {
   margin: 0 1rem;
 }
 
-.bus-stop:first-child > .bus-stop__bullet, 
+.bus-stop:first-child > .bus-stop__bullet,
 .bus-stop:last-child > .bus-stop__bullet {
   width: 1.5rem;
   height: 1.5rem;
@@ -210,4 +224,23 @@ footer {
 .footer-title {
   font-weight: bold;
   font-size: 150%;
+}
+
+.reservation {
+  width: 25rem;
+  max-width: 95%;
+  padding: 2rem;
+
+  margin: 4rem auto 4rem auto;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px gray;
+}
+
+.reservation__body {
+  display: flex;
+}
+
+.reservation__body__headings {
+  margin-right: 2rem;
 }
