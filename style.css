@@ -11,6 +11,9 @@ html {
 
 body {
   margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -208,6 +211,25 @@ header {
   height: 3rem;
 }
 
+.reservation {
+  width: 25rem;
+  max-width: 95%;
+  padding: 2rem;
+
+  margin: -2rem auto 4rem auto;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px gray;
+}
+
+.reservation__body {
+  display: flex;
+}
+
+.reservation__body__headings {
+  margin-right: 2rem;
+}
+
 .seat__number {
   fill: currentColor;
   font-family: 'Open Sans';
@@ -224,23 +246,4 @@ footer {
 .footer-title {
   font-weight: bold;
   font-size: 150%;
-}
-
-.reservation {
-  width: 25rem;
-  max-width: 95%;
-  padding: 2rem;
-
-  margin: 4rem auto 4rem auto;
-  background-color: white;
-  border-radius: 1rem;
-  box-shadow: 0 0 5px gray;
-}
-
-.reservation__body {
-  display: flex;
-}
-
-.reservation__body__headings {
-  margin-right: 2rem;
 }
