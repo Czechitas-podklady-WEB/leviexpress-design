@@ -1,16 +1,19 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 * {
   box-sizing: border-box;
 }
 
 html {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #444;
 }
 
 body {
   margin: 0;
+}
+
+#app {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -77,6 +80,7 @@ label {
   background-color: lightgray;
   cursor: initial;
 }
+
 /* ---------- konec globálních stylů ---------- */
 
 /* ---------- styly pro hlavičku  ---------- */
@@ -107,7 +111,7 @@ header {
 /* ---------- styly pro vyhledávací formulář  ---------- */
 
 .journey-picker {
-  margin: -2rem auto 0 auto;
+  margin: -2rem auto 4rem auto;
   padding: 2rem;
 
   color: white;
@@ -161,7 +165,7 @@ header {
   align-items: center;
   margin-bottom: 1rem;
 
-  max-width: 24rem;
+  max-width: 26rem;
 }
 
 .bus-stop__bullet {
@@ -172,7 +176,7 @@ header {
   margin: 0 1rem;
 }
 
-.bus-stop:first-child > .bus-stop__bullet,
+.bus-stop:first-child > .bus-stop__bullet, 
 .bus-stop:last-child > .bus-stop__bullet {
   width: 1.5rem;
   height: 1.5rem;
@@ -204,10 +208,15 @@ header {
 }
 
 /* ---------- styly pro sedadlo  ---------- */
+
 .seat {
-  border: none;
-  padding: 0;
-  background-color: transparent;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 0.25rem;
+}
+
+.seat:not(.seat--occupied):not(.seat--selected) {
+  cursor: pointer;
 }
 
 .seat__rect {
@@ -218,12 +227,13 @@ header {
   fill: #888;
 }
 
-.seat--selected .seat__rect, .seat:not(.seat--occupied):hover .seat__rect {
-  fill: #ed6a5a;
-}
-
 .seat--selected {
   transform: scale(1.2);
+}
+
+.seat--selected .seat__rect, 
+.seat:not(.seat--occupied):hover .seat__rect {
+  fill: #ed6a5a;
 }
 
 .seat__path {
@@ -234,7 +244,8 @@ header {
   stroke-linejoin: round;
 }
 
-.seat--selected .seat__path, .seat:not(.seat--occupied):hover .seat__path {
+.seat--selected .seat__path, 
+.seat:not(.seat--occupied):hover .seat__path {
   stroke: black;
 }
 
@@ -242,23 +253,18 @@ header {
   fill: #000000;
   font-family: "Open Sans";
   font-size: 36px;
-  text-anchor: middle
+  text-anchor: middle;
+  user-select: none;
 }
 
-.seat--selected .seat__text, .seat:not(.seat--occupied):hover .seat__text {
+.seat--selected .seat__text, 
+.seat:not(.seat--occupied):hover .seat__text {
   fill: white;
-}
-
-.seat {
-  width: 3rem;
-  height: 3rem;
 }
 
 /* ---------- styly pro rezervaci  ---------- */
 
 .reservation {
-  width: 25rem;
-  max-width: 95%;
   padding: 2rem;
 
   margin: -2rem auto 4rem auto;
@@ -271,8 +277,12 @@ header {
   display: flex;
 }
 
-.reservation__body__headings {
+.reservation__headings {
   margin-right: 2rem;
+}
+
+.reservation__info {
+  font-weight: bold;
 }
 
 /* ---------- styly pro patičku  ---------- */
