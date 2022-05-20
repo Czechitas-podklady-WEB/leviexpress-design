@@ -72,6 +72,12 @@ label {
   cursor: pointer;
 }
 
+.btn--big {
+  font-size: 1.2rem;
+  border-radius: 2rem;
+  padding: 1rem 1.5rem;
+}
+
 .btn:hover {
   background-color: #eb5846;
 }
@@ -270,6 +276,11 @@ header {
 .seat--selected .seat__text,
 .seat:not(.seat--occupied):hover .seat__text {
   fill: white;
+}
+
+.controls {
+  padding: 0 2rem;
+  text-align: center;
 }
 
 /* ---------- styly pro rezervaci  ---------- */
